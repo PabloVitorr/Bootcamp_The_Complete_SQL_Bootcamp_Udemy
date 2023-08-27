@@ -128,7 +128,7 @@ SELECT COUNT(*)
 FROM film
 	WHERE length <= 50;
 
--- BETWEEN ------------------------------------------
+-- BETWEEN ----------------------------------------------------------
 SELECT * FROM payment
 	LIMIT 2;
 
@@ -217,3 +217,8 @@ SELECT
 FROM film
 	WHERE rating = 'R'
 	AND replacement_cost BETWEEN 5.00 AND 15.00;
+
+SELECT 
+	COUNT(title)
+FROM film
+	WHERE title LIKE '%Truman%';
