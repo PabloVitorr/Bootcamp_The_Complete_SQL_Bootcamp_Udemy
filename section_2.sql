@@ -84,3 +84,115 @@ WHERE title = 'Outlaw Hanky';
 SELECT phone 
 FROM address
 WHERE address = '259 Ipoh Drive';
+
+-- ORDER BY
+SELECT * FROM customer
+	ORDER BY first_name;
+
+SELECT * FROM customer
+	ORDER BY first_name ASC;
+
+SELECT * FROM customer 
+	ORDER BY first_name DESC;
+	
+SELECT store_id, first_name, last_name 
+FROM customer 
+	ORDER BY store_id, first_name;
+
+SELECT store_id, first_name, last_name 
+FROM customer
+	ORDER BY store_id DESC, first_name ASC;
+
+-- LIMIT
+SELECT * FROM payment
+	ORDER BY payment_date DESC
+	LIMIT 5;
+
+SELECT * FROM payment
+	WHERE amount != 0.00
+	ORDER BY payment_date DESC
+	LIMIT 5;
+	
+-- Challenge ORDER BY
+SELECT customer_id 
+FROM payment 
+	ORDER BY payment_date ASC 
+	LIMIT 10;
+
+SELECT title, length
+FROM film
+	ORDER BY length ASC
+	LIMIT 5;
+	
+SELECT COUNT(*) 
+FROM film
+	WHERE length <= 50;
+
+-- BETWEEN
+SELECT * FROM payment
+	LIMIT 2;
+
+SELECT * FROM payment 
+	WHERE amount BETWEEN 8 AND 9;
+
+SELECT COUNT(*) 
+FROM payment 
+	WHERE amount BETWEEN 8 AND 9; 
+
+SELECT COUNT (*) 
+FROM payment 
+	WHERE amount NOT BETWEEN 8 AND 9;
+
+SELECT * FROM payment 
+	WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';
+
+SELECT * FROM payment
+	WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-14'
+
+-- IN
+SELECT * FROM payment 
+	WHERE amount IN(0.99, 1.98, 1.99);
+
+SELECT COUNT(*) 
+FROM payment 
+	WHERE amount IN(0.99, 1.98, 1.99);
+
+SELECT COUNT(*)
+FROM payment
+	WHERE amount NOT IN(0.99, 1.98, 1.99);
+
+SELECT * FROM customer 
+	WHERE first_name IN('John', 'Jake', 'Julie');
+
+SELECT * FROM customer
+	WHERE first_name NOT IN('John', 'Jake', 'Julie');
+
+-- LIKE and ILIKE
+SELECT * FROM customer
+	WHERE first_name LIKE 'J%';
+
+SELECT * FROM customer 
+	WHERE first_name LIKE 'J%'
+	AND last_name LIKE 'S%';
+
+SELECT * FROM customer 
+	WHERE first_name LIKE 'j%' 
+	AND last_name LIKE 's%';
+
+SELECT * FROM customer 
+	WHERE first_name ILIKE 'j%'
+	AND last_name ILIKE 's%';
+
+SELECT * FROM customer 
+	WHERE first_name LIKE '%er%';
+
+SELECT * FROM customer 
+	WHERE first_name LIKE '_her%';
+
+SELECT * FROM customer 
+	WHERE first_name NOT LIKE '_her%';
+
+SELECT * FROM customer 
+	WHERE first_name LIKE 'A%'
+	AND last_name NOT LIKE 'B%'
+	ORDER BY last_name;
