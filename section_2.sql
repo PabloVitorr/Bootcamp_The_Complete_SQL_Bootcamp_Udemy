@@ -1,4 +1,4 @@
--- SELECT Statement
+-- SELECT Statement -------------------------------------------------
 SELECT * FROM actor;
 SELECT first_name FROM actor;
 SELECT first_name, last_name FROM actor;
@@ -6,26 +6,26 @@ SELECT last_name, first_name FROM actor;
 select last_name, first_name from actor;
 SELECT last_name, first_name FROM actor
 
--- Challenge SELECT
+-- Challenge SELECT -------------------------------------------------
 SELECT * FROM customer;
 SELECT first_name, last_name, email FROM customer;
 
--- SELECT DISTINCT
+-- SELECT DISTINCT --------------------------------------------------
 SELECT * FROM film;
 SELECT DISTINCT(release_year) FROM film;
 SELECT DISTINCT(rental_rate) FROM film;
 
--- Challenge SELECT DISTINCT
+-- Challenge SELECT DISTINCT ----------------------------------------
 SELECT * FROM film;
 SELECT DISTINCT(rating) FROM film;
 
--- COUNT
+-- COUNT ------------------------------------------------------------
 SELECT * FROM payment;
 SELECT COUNT(*) FROM payment;
 SELECT COUNT(amount) FROM payment;
 SELECT COUNT(DISTINCT(amount)) FROM payment;
 
--- SELECT WHERE Part Two
+-- SELECT WHERE Part Two --------------------------------------------
 SELECT * FROM customer;
 
 SELECT * FROM customer 
@@ -66,7 +66,7 @@ WHERE rating = 'R' OR rating = 'PG-13';
 SELECT * FROM film 
 WHERE rating != 'R';
 
--- Challenge SELECT WHERE
+-- Challenge SELECT WHERE -------------------------------------------
 -- Challenge 1
 SELECT 
 	email 
@@ -85,7 +85,7 @@ SELECT phone
 FROM address
 WHERE address = '259 Ipoh Drive';
 
--- ORDER BY
+-- ORDER BY ---------------------------------------------------------
 SELECT * FROM customer
 	ORDER BY first_name;
 
@@ -103,7 +103,7 @@ SELECT store_id, first_name, last_name
 FROM customer
 	ORDER BY store_id DESC, first_name ASC;
 
--- LIMIT
+-- LIMIT ------------------------------------------------------------
 SELECT * FROM payment
 	ORDER BY payment_date DESC
 	LIMIT 5;
@@ -113,7 +113,7 @@ SELECT * FROM payment
 	ORDER BY payment_date DESC
 	LIMIT 5;
 	
--- Challenge ORDER BY
+-- Challenge ORDER BY -----------------------------------------------
 SELECT customer_id 
 FROM payment 
 	ORDER BY payment_date ASC 
@@ -128,7 +128,7 @@ SELECT COUNT(*)
 FROM film
 	WHERE length <= 50;
 
--- BETWEEN
+-- BETWEEN ------------------------------------------
 SELECT * FROM payment
 	LIMIT 2;
 
@@ -149,7 +149,7 @@ SELECT * FROM payment
 SELECT * FROM payment
 	WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-14'
 
--- IN
+-- IN ---------------------------------------------------------------
 SELECT * FROM payment 
 	WHERE amount IN(0.99, 1.98, 1.99);
 
@@ -167,7 +167,7 @@ SELECT * FROM customer
 SELECT * FROM customer
 	WHERE first_name NOT IN('John', 'Jake', 'Julie');
 
--- LIKE and ILIKE
+-- LIKE and ILIKE ---------------------------------------------------
 SELECT * FROM customer
 	WHERE first_name LIKE 'J%';
 
@@ -196,3 +196,24 @@ SELECT * FROM customer
 	WHERE first_name LIKE 'A%'
 	AND last_name NOT LIKE 'B%'
 	ORDER BY last_name;
+
+-- General Challenge 1 ----------------------------------------------
+SELECT 
+	COUNT(amount)
+FROM payment 
+	WHERE amount > 5.00;
+
+SELECT 
+	COUNT(first_name)
+FROM actor
+	WHERE first_name LIKE 'P%';
+
+SELECT 
+	DISTINCT(COUNT(district))
+FROM address;
+
+SELECT 
+	COUNT(title)
+FROM film
+	WHERE rating = 'R'
+	AND replacement_cost BETWEEN 5.00 AND 15.00;
