@@ -9,7 +9,8 @@ SELECT CURRENT_TIME;
 SELECT CURRENT_DATE;
 
 -- Timestamps and Extract Part Two ----------------------------------
-SELECT * FROM payment;
+SELECT * 
+FROM payment;
 
 SELECT 
 	EXTRACT(YEAR FROM payment_date) AS pay_year
@@ -93,17 +94,20 @@ SELECT
 FROM film 
 	WHERE rental_rate > (SELECT AVG(rental_rate) FROM film);
 
-SELECT * FROM rental;
-SELECT * FROM inventory;
+SELECT * 
+FROM rental;
+
+SELECT * 
+FROM inventory;
 
 SELECT 
 	film_id, 
 	title
 FROM film
 	WHERE film_id IN
-(SELECT 
-	inventory.film_id 
-FROM rental 
-	JOIN inventory ON inventory.inventory_id = rental.inventory_id
-	WHERE rental.return_date BETWEEN '2005-05-29' AND '2005-05-30')
+		(SELECT 
+			inventory.film_id 
+		FROM rental 
+			JOIN inventory ON inventory.inventory_id = rental.inventory_id
+			WHERE rental.return_date BETWEEN '2005-05-29' AND '2005-05-30')
 	ORDER BY title;

@@ -1,5 +1,6 @@
 -- Assessment Test 1 ------------------------------------------------
-SELECT * FROM payment;
+SELECT * 
+FROM payment;
 
 SELECT 
 	customer_id, 
@@ -11,7 +12,8 @@ FROM payment
 	ORDER BY SUM(amount) DESC;
 
 -- ------------------------------------------------------------------
-SELECT * FROM film;
+SELECT * 
+FROM film;
 
 SELECT 
 	COUNT(title)
@@ -19,7 +21,8 @@ FROM film
 	WHERE title LIKE 'J%';
 
 -- ------------------------------------------------------------------
-SELECT * FROM customer;
+SELECT * 
+FROM customer;
 
 SELECT
 	first_name,

@@ -64,8 +64,11 @@ FROM film
 	WHERE film.film_id IS NULL;
 
 -- JOIN Challege ----------------------------------------------------
-SELECT * FROM customer;
-SELECT * FROM address;
+SELECT * 
+FROM customer;
+
+SELECT * 
+FROM address;
 
 SELECT 
 	address.district,
@@ -74,9 +77,14 @@ FROM customer
 	JOIN address ON customer.address_id = address.address_id
 	WHERE address.district = 'California';
 
-SELECT * FROM film;
-SELECT * FROM actor;
-SELECT * FROM film_actor;
+SELECT * 
+FROM film;
+
+SELECT * 
+FROM actor;
+
+SELECT * 
+FROM film_actor;
 
 SELECT 
 	film.title,
