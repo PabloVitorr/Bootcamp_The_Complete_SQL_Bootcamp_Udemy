@@ -15,17 +15,6 @@ SELECT
 	last_name, 
 	first_name 
 FROM actor;
-
-select 
-	last_name, 
-	first_name 
-from actor;
-
-SELECT 
-	last_name, 
-	first_name 
-FROM actor;
-
 -- Challenge SELECT -------------------------------------------------
 SELECT * 
 FROM customer;

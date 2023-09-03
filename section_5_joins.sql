@@ -41,8 +41,11 @@ SELECT
 FROM customer;
 
 -- LEFT OUTER JOIN --------------------------------------------------
-SELECT * FROM film;
-SELECT * FROM inventory;
+SELECT * 
+FROM film;
+
+SELECT * 
+FROM inventory;
 
 SELECT 
 	film.film_id, 

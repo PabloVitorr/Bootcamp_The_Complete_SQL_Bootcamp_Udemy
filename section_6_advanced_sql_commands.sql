@@ -86,7 +86,8 @@ SELECT
 FROM customer;
 
 -- SubQuery ---------------------------------------------------------
-SELECT * FROM film;
+SELECT * 
+FROM film;
 
 SELECT 
 	title, 
@@ -111,3 +112,41 @@ FROM film
 			JOIN inventory ON inventory.inventory_id = rental.inventory_id
 			WHERE rental.return_date BETWEEN '2005-05-29' AND '2005-05-30')
 	ORDER BY title;
+
+SELECT 
+	first_name, 
+	last_name 
+FROM customer AS c 
+	WHERE EXISTS
+		(SELECT * 
+		FROM  payment AS p 
+		WHERE p.customer_id = c.customer_id 
+		AND amount > 11);
+
+SELECT 
+	first_name, 
+	last_name 
+FROM customer AS c 
+	WHERE NOT EXISTS
+		(SELECT * 
+		FROM  payment AS p 
+		WHERE p.customer_id = c.customer_id 
+		AND amount > 11);
+
+-- Self Join --------------------------------------------------------
+SELECT *  
+FROM film;
+
+SELECT 
+	title, 
+	length 
+FROM film 
+WHERE length = 117;
+
+SELECT 
+	f1.title, 
+	f2.title, 
+	f1.length
+FROM film AS f1
+	JOIN film AS f2 ON f1.film_id != f2.film_id
+	AND f1.length = f2.length;

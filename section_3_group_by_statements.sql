@@ -11,8 +11,7 @@ SELECT
 FROM film;
 
 SELECT 
-	MAX(replacement_cost), 
-	title 
+	MAX(replacement_cost) 
 FROM film;
 
 SELECT 
