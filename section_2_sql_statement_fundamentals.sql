@@ -114,20 +114,17 @@ FROM film
 	WHERE rating != 'R';
 
 -- Challenge SELECT WHERE -------------------------------------------
--- Challenge 1
 SELECT 
 	email 
 FROM customer
 	WHERE first_name = 'Nancy' 
 	AND last_name = 'Thomas';
 
--- Challenge 2
 SELECT 
 	description
 FROM film
 	WHERE title = 'Outlaw Hanky';
 
--- Challenge 3
 SELECT 
 	phone 
 FROM address
