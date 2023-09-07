@@ -151,10 +151,10 @@ CREATE OR REPLACE VIEW customer_info AS
 SELECT 
 	first_name, 
 	last_name, 
-	address,
-	district
+	address, 
+	district 
 FROM customer 
-	JOIN address ON customer.address_id = address.address_id;
+	JOIN address ON customer.address_id = address.address_id; 
 
 SELECT * 
 FROM customer_info;
