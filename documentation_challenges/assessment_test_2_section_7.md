@@ -171,4 +171,4 @@
 
 <br/>
 
-[**<<==**](./challenges_section_6.md) |====| [**HOME**](../README.md) |====| [**==>>**](./challenges_section_8.md)
+[**<<==**](./challenges_section_6.md) |====| [**HOME**](../README.md) |====| [**==>>**](./assessment_test_3_section_9.md)
