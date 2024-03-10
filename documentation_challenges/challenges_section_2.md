@@ -151,4 +151,4 @@ FROM film
 
 <br/>
 
-[**Home**](../README.md) |====| [**==>>**](./challenges_section_3.md)
+[**HOME**](../README.md) |====| [**==>>**](./challenges_section_3.md)
