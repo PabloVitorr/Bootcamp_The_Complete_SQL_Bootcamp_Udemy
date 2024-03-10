@@ -10,3 +10,8 @@
 - [**Challenges Section 5 - JOINS**](./documentation_challenges/challenges_section_5.md)
 - [**Challenges Section 6 - Advanced SQL Commands**](./documentation_challenges/challenges_section_6.md)
 - [**Assessment Test 2 Section 7**](./documentation_challenges/assessment_test_2_section_7.md)
+- [**Assessment Test 3 Section 9**](./documentation_challenges/assessment_test_3_section_9.md.md)
+
+<br/>
+
+* :pushpin: [**General Content**](./general_scripts/)
