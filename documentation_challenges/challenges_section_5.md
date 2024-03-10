@@ -30,4 +30,4 @@ JOIN film ON film_actor.film_id = film.film_id
 
 <br/>
 
-[**<<==**](./assessment_test_1_section_4.md) |====| [**HOME**](../README.md) |====| [**==>>**](./advanced_sql_commands_section_6.md)
+[**<<==**](./assessment_test_1_section_4.md) |====| [**HOME**](../README.md) |====| [**==>>**](./challenges_section_6.md)
