@@ -57,4 +57,4 @@ FROM payment
 
 <br/>
 
-[**<<==**](./challenges_section_2.md) |====| [**HOME**](../README.md) |====| [**==>>**](./assesment_test_1_section_4.md)
+[**<<==**](./challenges_section_2.md) |====| [**HOME**](../README.md) |====| [**==>>**](./assessment_test_1_section_4.md)
