@@ -12,25 +12,67 @@
 
 ## **Tools Used**
 
-<div class="container">
-  <picture>
-    <img src="./Icons/vmware_workstation_icon.svg" width="54px" height="54px" title="VMware" alt="VMware Icon"></img>
-  </picture>
-  <picture>
-    <img src="./Icons/postgresql-icon.svg" width="54px" height="54px" title="PostgreSQL - pgAdmin4" alt="VMware Icon"></img>
-  </picture>
-<div>
-
-<style>
-  .container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-  }
-</style>
+<picture>
+  <img src="./Icons/vmware_workstation_icon.svg" width="54px" height="54px" title="VMware" alt="VMware Icon"></img>
+</picture>
+<picture>
+  <img src="./Icons/postgresql-icon.svg" width="54px" height="54px" title="PostgreSQL - pgAdmin4" alt="VMware Icon"></img>
+</picture>
 
 <br/>
--
+<br/>
+
+## **Preparing the environment**
+
+- ### **PostgreSQL Installation**
+
+  - Add the PostgreSQL repository to the sources.list file:
+    ```bash
+    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    ```
+  
+  - Download the PostgreSQL signing key and add it to the system:
+    ```bash
+    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    ```
+  
+  - Update the list of available packages:
+    ```bash
+    sudo apt-get update
+    ```
+  
+  - Install the desired version of PostgreSQL:
+    ```sql
+    sudo apt-get -y install postgresql
+    ```
+
+<br/>
+
+- ### **pgAdmin4 installation**
+
+  - Install curl:
+    ```bash
+    sudo apt install curl
+    ```
+  
+  - Install the public key to the repository:
+    ```bash
+    curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+    ```
+
+  - Create the repository configuration file:
+    ```bash
+    sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+    ```
+
+  - Install for Desktop and Web modes:
+    ```bash
+    sudo apt install pgadmin4
+    ```
+
+  - After installing PostgreSQL and pgAdmin4, simply perform the initial user and connection configurations as desired.
+
+<br/>
 
 ## **Challenges**
 
@@ -45,4 +87,4 @@
 
 <br/>
 
-* :pushpin: [**General Content**](./general_scripts/)
+ :pushpin: [**General Content**](./general_scripts/)
