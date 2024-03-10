@@ -9,3 +9,4 @@
 - [**Assessment Test 1 Section 4**](./documentation_challenges/assessment_test_1_section_4.md) 
 - [**Challenges Section 5 - JOINS**](./documentation_challenges/challenges_section_5.md)
 - [**Challenges Section 6 - Advanced SQL Commands**](./documentation_challenges/challenges_section_6.md)
+- [**Assessment Test 2 Section 7**](./documentation_challenges/assessment_test_2_section_7.md)
