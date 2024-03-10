@@ -26,7 +26,7 @@
     WHERE title LIKE 'J%';
   ```
 
-1. What customer has the highest customer ID number whose name starts **with** an 'E' **and** has an address ID lower than 500?
+3. What customer has the highest customer ID number whose name starts **with** an 'E' **and** has an address ID lower than 500?
 
   ```sql
   SELECT
