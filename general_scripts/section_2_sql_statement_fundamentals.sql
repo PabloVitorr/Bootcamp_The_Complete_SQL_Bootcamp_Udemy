@@ -211,7 +211,7 @@ FROM payment
 	WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-15';
 
 SELECT * 
- FROM payment
+FROM payment
 	WHERE payment_date BETWEEN '2007-02-01' AND '2007-02-14'
 
 -- IN ---------------------------------------------------------------
@@ -287,7 +287,11 @@ FROM actor
 	WHERE first_name LIKE 'P%';
 
 SELECT 
-	DISTINCT(COUNT(district))
+	COUNT(DISTINCT(district))
+FROM address;
+
+SELECT 
+	DISTINCT(district)
 FROM address;
 
 SELECT 
