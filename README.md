@@ -15,8 +15,9 @@
 <picture>
   <img src="./Icons/vmware_workstation_icon.svg" width="54px" height="54px" title="VMware" alt="VMware Icon"></img>
 </picture>
+<span> </span>
 <picture>
-  <img src="./Icons/postgresql-icon.svg" width="54px" height="54px" title="PostgreSQL - pgAdmin4" alt="VMware Icon"></img>
+  <img src="./Icons/postgresql_icon.svg" width="54px" height="54px" title="PostgreSQL - pgAdmin4" alt="PostgreSQL - pgAdmin4 Icon"></img>
 </picture>
 
 <br/>
