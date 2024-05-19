@@ -1,26 +1,8 @@
 # **Repository for The Complete SQL Bootcamp Go From Zero To Hero**
 
-<br/>
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
-## **Operating System used**
-
-<picture>
-  <img src="./Icons/ubuntu_icon.svg" width="54px" height="54px" title="Ubuntu" alt="Ubuntu Icon"></img>
-</picture>
-
-<br/>
-
-## **Tools Used**
-
-<picture>
-  <img src="./Icons/vmware_workstation_icon.svg" width="54px" height="54px" title="VMware" alt="VMware Icon"></img>
-</picture>
-<span> </span>
-<picture>
-  <img src="./Icons/postgresql_icon.svg" width="54px" height="54px" title="PostgreSQL - pgAdmin4" alt="PostgreSQL - pgAdmin4 Icon"></img>
-</picture>
-
-<br/>
 <br/>
 
 ## **Preparing the environment**
